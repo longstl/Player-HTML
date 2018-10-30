@@ -12,7 +12,8 @@ function load() {
                 videoItem += '<td>'+ jsObject[i].name +'</td>';
                 videoItem += '<td>'+ jsObject[i].author +'</td>';
                 videoItem += '<td>'+ jsObject[i].singer +'</td>';
-                videoItem += '<td> <button type="button" onclick="doSomeThing(\''+jsObject[i].link +'\')" >Click Me!</button></td>';
+                videoItem += '<td> <button type="button" onclick="doSomeThing(\''+ jsObject[i].link +'\')" '+
+                    'src="' + jsObject[i].thumbnail + '">Click Me!</button> </td>';
                 videoItem += '</tr>';
                 content += videoItem;
             }
@@ -24,8 +25,9 @@ function load() {
 }
 
 var musicLink = document.getElementById('player');
-console.log(musicLink);
 
-function doSomeThing(musicLink) {
-    musicLink.src = musicLink;
+
+function doSomeThing(musicLink1) {
+    alert(musicLink1);
+    musicLink.src = musicLink1;
 }
