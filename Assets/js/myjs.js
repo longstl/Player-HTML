@@ -24,10 +24,8 @@ function load() {
     http.send();
 }
 
-var musicLink = document.getElementById('player');
-
-
 function doSomeThing(musicLink1) {
+    var musicLink = document.getElementById('player');
     alert(musicLink1);
     musicLink.src = musicLink1;
 }
