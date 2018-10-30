@@ -12,7 +12,7 @@ function load() {
                 videoItem += '<td>'+ jsObject[i].name +'</td>';
                 videoItem += '<td>'+ jsObject[i].author +'</td>';
                 videoItem += '<td>'+ jsObject[i].singer +'</td>';
-                videoItem += '<td> <button onclick="" type="button">Play</button> </td>';
+                videoItem += '<td> <button type="button" onclick="doSomeThing(\''+jsObject[i].link +'\')" >Click Me!</button></td>';
                 videoItem += '</tr>';
                 content += videoItem;
             }
@@ -21,4 +21,11 @@ function load() {
     };
     http.open("GET", MUSIC_API, true);
     http.send();
+}
+
+var musicLink = document.getElementById('player');
+console.log(musicLink);
+
+function doSomeThing(musicLink) {
+    musicLink.src = musicLink;
 }
